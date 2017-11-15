@@ -3,36 +3,6 @@ This is an algorithm that implements BPA for a multiple layer neural network
 
 import math
    
-def setWeight(wn):
-    w = []
-    y = []
-    z = []
-    for i in range(int(wn)):
-        we = input('Enter the value,head,tail for this wiegth(w'+str(i+1)+')=')
-        ws = we.split(',')        
-        w.append(ws)
-        if (ws[2][0] == 'y') and (ws[2] not in y):
-            y.append(ws[2])
-        elif (ws[2][0] == 'z') and (ws[2] not in z):
-            z.append(ws[2])
-    v = {'weight':w,'hiddenL':y,'outputL':z}                   
-    return v
-
-def setBias(bn):
-    b = []        
-    for j in range(int(bn)):
-        ba = input('Enter the value,tail for this bais(b'+str(j+1)+')=')
-        bs = ba.split(',')        
-        b.append(bs)
-    return b
-
-def setTarget(tv):
-    ts=tv.split(',')
-    t = []
-    for i in range(len(ts)):
-        t.append(float(ts[i]))
-    return t
-
 def getWy(g,w):
     v = 0
     
